@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Stardew Valley Date Converter</string>
+    <string name="textToday">Today\'s date is</string>
+    <string name="textChristmas">Christmas Day is</string>
+    <string name="textHalloween">Halloween is</string>
+    <string name="textNewYears">New Year\'s Day is</string>
+    <string name="textThanksgiving">Thanksgiving is</string>
+    <string name="textEaster">Easter is</string>
+    <string name="btnConvert">Convert</string>
+    <string name="btnCustom">Custom Date</string>
+    <string name="btnMain">Main Page</string>
+    <string name="textResult">Entered date is</string>
+    <string name="btnBack">Back</string>
+    <string-array name="spinnerDates">
+        <item>Today</item>
+        <item>New Year's Day</item>
+        <item>Easter</item>
+        <item>Halloween</item>
+        <item>Thanksgiving</item>
+        <item>Christmas Day</item>
+    </string-array>
+</resources>
