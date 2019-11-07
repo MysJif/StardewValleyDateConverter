@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun Thanksgiving(year: Int): Int {
+    fun Thanksgiving(year: Int): Int { //thanksgiving! why arent these static.
         var first = LocalDate.of(year, 11, 1)
 
         if (first.dayOfWeek.equals(DayOfWeek.THURSDAY)) {
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun Easter(year: Int): LocalDate {
+    fun Easter(year: Int): LocalDate { //i dont understand this and i dont want to understand this. ask gauss.
         var a = year%19
         var b = year/100
         var c = year%100
