@@ -1,5 +1,6 @@
 package com.example.stardewvalleydateconverter
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -24,6 +25,11 @@ class MainActivity : AppCompatActivity() {
         convertBtn.setOnClickListener {
             var id = dateSpinner.selectedItemPosition
             showDate.text = convertSet(id)
+        }
+
+        customBtn.setOnClickListener{
+            var intent = Intent(this, custom::class.java)
+            startActivity(intent)
         }
 
     }
