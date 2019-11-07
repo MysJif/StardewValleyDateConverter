@@ -16,6 +16,9 @@ class results : AppCompatActivity() {
         val resultText = findViewById<TextView>(R.id.textResult2)
         val backBtn = findViewById<Button>(R.id.btnBack)
         val mainBtn = findViewById<Button>(R.id.btnMain2)
+        var date = intent.getStringExtra("Date")
+
+        resultText.text = date
 
         backBtn.setOnClickListener{
             var intent = Intent(this, custom::class.java)

@@ -30,7 +30,7 @@ class custom : AppCompatActivity() {
         convertBtn.setOnClickListener {
 
             var intent = Intent(this, results::class.java)
-            intent.putExtra("Date", selectDate)
+            intent.putExtra("Date", convert(selectDate))
 
             startActivity(intent)
         }

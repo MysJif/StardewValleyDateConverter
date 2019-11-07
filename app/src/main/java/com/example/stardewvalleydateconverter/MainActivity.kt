@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         val convertBtn = findViewById<Button>(R.id.btnConvert2)
         val customBtn = findViewById<Button>(R.id.btnCustom)
 
+        showDate.text = convert(LocalDate.now())
+
         convertBtn.setOnClickListener {
             var id = dateSpinner.selectedItemPosition
             showDate.text = convertSet(id)
