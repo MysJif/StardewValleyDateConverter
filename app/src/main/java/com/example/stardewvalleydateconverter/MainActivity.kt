@@ -8,7 +8,6 @@ import android.widget.Spinner
 import android.widget.TextView
 import java.time.DayOfWeek
 import java.time.LocalDate
-import java.time.temporal.TemporalAdjuster
 import java.time.temporal.TemporalAdjusters
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         val showDate = findViewById<TextView>(R.id.textShowDate)
         val dateSpinner = findViewById<Spinner>(R.id.spinnerDate)
-        val convertBtn = findViewById<Button>(R.id.btnConvert)
+        val convertBtn = findViewById<Button>(R.id.btnConvert2)
         val customBtn = findViewById<Button>(R.id.btnCustom)
 
         convertBtn.setOnClickListener {

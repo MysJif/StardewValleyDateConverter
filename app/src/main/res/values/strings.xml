@@ -13,7 +13,7 @@
     <string name="btnBack">Back</string>
     <string-array name="spinnerDates">
         <item>Today</item>
-        <item>New Year's Day</item>
+        <item>New Year\'s Day</item>
         <item>Easter</item>
         <item>Halloween</item>
         <item>Thanksgiving</item>
