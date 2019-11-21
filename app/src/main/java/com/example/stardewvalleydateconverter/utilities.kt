@@ -34,7 +34,7 @@ fun springAdjust(day: Int): Int { //adjusts day of year to start in spring
 }
 
 fun convertSdDay(day: Int, leap: Boolean): Int { //converts gregorian to stardew valley
-    var length: Int = 0
+    val length: Int
     if (leap) {
         length = 366
     } else {
