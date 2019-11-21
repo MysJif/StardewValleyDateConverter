@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.CalendarView
 import java.time.LocalDate
 
-class custom : AppCompatActivity() {
+class Custom : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,20 +18,20 @@ class custom : AppCompatActivity() {
         val mainBtn = findViewById<Button>(R.id.btnMain)
         var selectDate = LocalDate.now()
 
-        calendarWdgt.setOnDateChangeListener(CalendarView.OnDateChangeListener { view, year, month, dayOfMonth ->
+        calendarWdgt.setOnDateChangeListener { _, year, month, dayOfMonth ->
             selectDate = LocalDate.of(year, month+1, dayOfMonth)
-        })
+        }
 
         convertBtn.setOnClickListener {
 
-            var intent = Intent(this, Results::class.java)
+            val intent = Intent(this, Results::class.java)
             intent.putExtra("Date", convert(selectDate))
 
             startActivity(intent)
         }
 
         mainBtn.setOnClickListener {
-            var intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
 
             startActivity(intent)
         }

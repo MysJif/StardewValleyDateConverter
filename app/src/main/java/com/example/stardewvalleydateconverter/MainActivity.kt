@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         customBtn.setOnClickListener{
-            val intent = Intent(this, custom::class.java)
+            val intent = Intent(this, Custom::class.java)
             startActivity(intent)
         }
 

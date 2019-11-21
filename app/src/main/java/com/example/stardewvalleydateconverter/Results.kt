@@ -20,7 +20,7 @@ class Results : AppCompatActivity() {
         resultText.text = date
 
         backBtn.setOnClickListener{
-            val intent = Intent(this, custom::class.java)
+            val intent = Intent(this, Custom::class.java)
             startActivity(intent)
         }
 
