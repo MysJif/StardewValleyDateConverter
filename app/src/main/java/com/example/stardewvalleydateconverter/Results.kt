@@ -5,9 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import org.w3c.dom.Text
 
-class results : AppCompatActivity() {
+class Results : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,17 +15,17 @@ class results : AppCompatActivity() {
         val resultText = findViewById<TextView>(R.id.textResult2)
         val backBtn = findViewById<Button>(R.id.btnBack)
         val mainBtn = findViewById<Button>(R.id.btnMain2)
-        var date = intent.getStringExtra("Date")
+        val date = intent.getStringExtra("Date")
 
         resultText.text = date
 
         backBtn.setOnClickListener{
-            var intent = Intent(this, custom::class.java)
+            val intent = Intent(this, custom::class.java)
             startActivity(intent)
         }
 
         mainBtn.setOnClickListener{
-            var intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

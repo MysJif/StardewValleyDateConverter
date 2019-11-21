@@ -5,9 +5,9 @@ import java.time.LocalDate
 //full conversion method
 fun convert(now: LocalDate): String {
     var dayOfYear = now.dayOfYear //get the date of the year out of 365/366
-    var dayOfSeason: Int
-    var dayOfWeek: String
-    var season: String
+    val dayOfSeason: Int
+    val dayOfWeek: String
+    val season: String
 
     dayOfYear = springAdjust(dayOfYear) //adjust date of year so that it starts with spring
 
@@ -24,15 +24,17 @@ fun convert(now: LocalDate): String {
 }
 
 fun springAdjust(day: Int): Int { //adjusts day of year to start in spring
+    var day2: Int = day
     if (day < 79) {
-        return day+286 //before spring
+        day2+=286 //before spring
     } else {
-        return day-78 //after spring
+        day2-=78 //after spring
     }
+    return day2
 }
 
 fun convertSdDay(day: Int, leap: Boolean): Int { //converts gregorian to stardew valley
-    var length: Int
+    var length: Int = 0
     if (leap) {
         length = 366
     } else {
@@ -55,19 +57,24 @@ fun sdSeason(day: Int): Int { //finds which of the 4 months the dayofyear is in
 }
 
 fun sdDayOfSeason(day: Int, month: Int): Int { //finds the day of the month the day of year it is
-    if (month ==1) {
-        return day //spring
-    } else if (month == 2) {
-        return day-28 //summer
-    } else if (month == 3) {
-        return day-56 //fall
-    } else {
-        return day-84 //winter
+    when (month) {
+        1 -> {
+            return day
+        } //spring
+        2 -> {
+            return day - 28
+        } //summer
+        3 -> {
+            return day - 56
+        } //fall
+        else -> {
+            return day - 84
+        } //winter
     }
 }
 
 fun seasonString(month: Int): String {
-    return when (month) {
+    when (month) {
         1 -> {
             return "Spring"
         }
@@ -85,7 +92,7 @@ fun seasonString(month: Int): String {
 }
 
 fun dayOfWeek(day: Int): String {
-    return when (day) {
+    when (day) {
         1, 8, 15, 22 -> {
             return "Monday"
         }

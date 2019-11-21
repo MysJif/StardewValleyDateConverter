@@ -1,16 +1,11 @@
 package com.example.stardewvalleydateconverter
 
 import android.content.Intent
-import android.icu.util.Calendar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.CalendarView
 import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
-import java.util.*
 
 class custom : AppCompatActivity() {
 
@@ -29,7 +24,7 @@ class custom : AppCompatActivity() {
 
         convertBtn.setOnClickListener {
 
-            var intent = Intent(this, results::class.java)
+            var intent = Intent(this, Results::class.java)
             intent.putExtra("Date", convert(selectDate))
 
             startActivity(intent)
