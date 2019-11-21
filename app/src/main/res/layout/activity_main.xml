@@ -15,7 +15,6 @@
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             android:textSize="36sp" android:fontFamily="@font/stardew_valley"/>
     <TextView
-            android:text="Date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textShowDate" android:layout_marginTop="40dp"
