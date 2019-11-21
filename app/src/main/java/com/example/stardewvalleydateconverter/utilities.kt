@@ -45,49 +45,47 @@ fun convertSdDay(day: Int, leap: Boolean): Int { //converts gregorian to stardew
 }
 
 fun sdSeason(day: Int): Int { //finds which of the 4 months the dayofyear is in
-    if (day <= 28) {
-        return 1 //spring
-    } else if (day <= 56) {
-        return 2 //summer
-    } else if (day <= 84) {
-        return 3 //fal
-    } else {
-        return 4 //winter
+    return when {
+        day <= 28 -> 1 //spring
+        day <= 56 -> 2 //summer
+        day <= 84 -> 3 //fal
+        else -> 4
     }
+        //winter
 }
 
 fun sdDayOfSeason(day: Int, month: Int): Int { //finds the day of the month the day of year it is
-    when (month) {
+    return when (month) {
         1 -> {
-            return day
+            day
         } //spring
         2 -> {
-            return day - 28
+            day - 28
         } //summer
         3 -> {
-            return day - 56
+            day - 56
         } //fall
         else -> {
-            return day - 84
+            day - 84
         } //winter
     }
 }
 
 fun seasonString(month: Int): String {
-    when (month) {
+    return when (month) {
         1 -> {
-            return "Spring"
+            "Spring"
         }
         2 -> {
-            return "Summer"
+            "Summer"
         }
         3 -> {
-            return "Fall"
+            "Fall"
         }
         4 -> {
-            return "Winter"
+            "Winter"
         }
-        else -> return ""
+        else -> ""
     }
 }
 
