@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity" android:background="#4815E7FA">
+        tools:context=".MainActivity" android:background="?attr/colorAccent">
     <TextView
             android:text="@string/textToday"
             android:layout_width="wrap_content"
@@ -23,13 +23,15 @@
             android:textSize="36sp" android:gravity="center_horizontal|center_vertical"
             android:fontFamily="@font/stardew_valley"/>
     <Spinner
-            android:layout_width="280dp"
-            android:layout_height="26dp"
+            android:layout_width="286dp"
+            android:layout_height="47dp"
             android:id="@+id/spinnerDate" android:entries="@array/spinnerDates"
             android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/textShowDate"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:fontFamily="@font/stardew_valley"
             app:layout_constraintHorizontal_bias="0.495"
+            android:textSize="24sp"
             android:backgroundTintMode="add" android:alpha="1"
     />
     <Button
