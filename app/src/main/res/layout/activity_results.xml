@@ -43,7 +43,7 @@
     <ImageView
             android:layout_width="248dp"
             android:layout_height="250dp" app:srcCompat="@drawable/pixel_cloud"
-            android:id="@+id/imageView3" android:layout_marginTop="420dp"
+            android:id="@+id/imageView3" android:layout_marginTop="316dp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="80dp" android:contentDescription="TODO"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
